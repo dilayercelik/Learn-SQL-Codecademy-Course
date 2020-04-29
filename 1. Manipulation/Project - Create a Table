@@ -1,0 +1,70 @@
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Jane Doe', '30-05-1990');
+
+SELECT * FROM friends;
+
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'Marie Anne', '16-03-2001');
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'Jeanne Tao', '21-07-2000');
+
+SELECT * FROM friends;
+
+UPDATE friends
+SET name = 'Jane Smith'
+WHERE id = 1;
+
+SELECT name FROM friends;
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+UPDATE friends
+SET email = 'jane@codecademy.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'marie.anne@gmail.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'jeanne.tao@gmail.com'
+WHERE  id = 3;
+
+SELECT * FROM friends;
+
+DELETE FROM friends
+WHERE id = 1;
+
+SELECT * FROM friends;
+
+ALTER TABLE friends
+ADD COLUMN instagram TEXT;
+
+UPDATE friends
+SET instagram = 'marieannee'
+WHERE id = 2;
+
+UPDATE friends
+SET instagram = 'coldcoffee'
+WHERE id =3;
+
+ALTER TABLE friends
+ADD COLUMN phone TEXT;
+
+UPDATE friends
+SET phone = 'not shared'
+WHERE id = 2;
+
+UPDATE friends
+SET phone = 'not owned'
+WHERE id = 3;
+
+SELECT * FROM friends;
